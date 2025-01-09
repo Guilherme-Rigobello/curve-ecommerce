@@ -1,10 +1,12 @@
+import CartOverlay from '../../components/Cart/CartOverlay';
 import HomeSection from './HomeSection';
 
 const Home = () => {
   return (
-    <div>
+    <>
+      <CartOverlay />
       <HomeSection />
-    </div>
+    </>
   );
 };
 
