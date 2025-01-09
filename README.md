@@ -1,8 +1,8 @@
-# React + Vite
+# **🛒 Curve's E-commerce**
+Plataforma funcional onde os usuários podem adicionar itens ao carrinho, filtrar produtos por preferências e explorar diversas funcionalidades para uma experiência de compra otimizada.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 👀 Dê uma olhada na -- Versão Demo --
 
-Currently, two official plugins are available:
+----> [Guilherme Rigobello - Sem Versão Demo Até o Momento]() <----
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
