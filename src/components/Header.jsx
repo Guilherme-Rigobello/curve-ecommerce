@@ -9,7 +9,7 @@ const Header = () => {
   const completeHeader = (
     <header className='flex justify-between items-center py-6 px-8 sticky top-0 shadow-xl shadow-slate-400 bg-slate-950 text-slate-200 text-xl z-10'>
       <Link to='/'>
-        <h1 className='flex items-center text-2xl font-semibold'>
+        <h1 className='flex items-center text-2xl max-sm:text-base font-semibold'>
           <span className='pr-2 text-3xl'>
             <GiClothes />
           </span>
