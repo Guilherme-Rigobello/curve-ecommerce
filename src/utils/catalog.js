@@ -43,7 +43,7 @@ export const catalog = [
   {
     id: 5,
     brand: 'Zara',
-    name: 'Camisa Larga Acolchoada de Veludo Cotelê',
+    name: 'Camisa Larga de Veludo Cotelê',
     price: 110,
     image: product5Img,
     feminine: false,
@@ -74,7 +74,7 @@ export const catalog = [
   },
 ];
 
-export const catalogIndexedById = catalog.reduce((acc, BiAccessibility) => {
+export const catalogIndexedById = catalog.reduce((acc, currentValue) => {
   const { id } = currentValue;
   acc[id] = currentValue;
   return acc;

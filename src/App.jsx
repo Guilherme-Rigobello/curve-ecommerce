@@ -13,17 +13,40 @@ const App = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState({});
 
+  const removeFromCart = (productId) => {
+    const cartItemsCopy = { ...cartItems };
+    delete cartItemsCopy[productId];
+    setCartItems(cartItemsCopy);
+  };
+
   const addToCart = (productId) => {
-    const updatedCart = {
+    setCartItems({
       ...cartItems,
       [productId]: (cartItems[productId] ?? 0) + 1,
-    };
-    setCartItems(updatedCart);
+    });
+  };
+
+  const OutToCart = (productId) => {
+    if (cartItems[productId] > 1) {
+      setCartItems({
+        ...cartItems,
+        [productId]: cartItems[productId] - 1,
+      });
+    } else {
+      removeFromCart(productId);
+    }
   };
 
   return (
     <CartContext.Provider
-      value={{ isCartOpen, setIsCartOpen, cartItems, addToCart }}
+      value={{
+        isCartOpen,
+        setIsCartOpen,
+        cartItems,
+        addToCart,
+        OutToCart,
+        removeFromCart,
+      }}
     >
       <Header />
       <Routes>

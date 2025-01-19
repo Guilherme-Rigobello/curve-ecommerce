@@ -1,9 +1,12 @@
 import { useContext } from 'react';
 import { CartContext } from '../../contexts/CartContext';
+import { Link } from 'react-router-dom';
 // ICONS
 import { MdClose } from 'react-icons/md';
+import { TiInputChecked } from 'react-icons/ti';
 // COMPONENT
 import CartProducts from './CartProducts';
+import TotalPriceCell from './TotalPriceCell';
 
 const CartOverlay = () => {
   const cartInfo = useContext(CartContext);
@@ -33,6 +36,17 @@ const CartOverlay = () => {
           </button>
         </div>
         <CartProducts />
+        <TotalPriceCell/>
+        <Link
+          className='flex items-center justify-center pb-2 mt-10 text-white relative group'
+          to='/checkout'
+        >
+          <span className='pe-1 text-3xl'>
+            <TiInputChecked />
+          </span>
+          Finalizar Compra
+          <span className='absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full'></span>
+        </Link>
       </section>
     </div>
   );
