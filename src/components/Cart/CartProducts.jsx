@@ -1,8 +1,9 @@
 import { useContext } from 'react';
 import { CartContext } from '../../contexts/CartContext';
 import CartItem from './CartItem';
+import SimpleCartItem from './SimpleCartItem';
 
-const CartProducts = () => {
+const CartProducts = ({ isHomePage = true }) => {
   const { cartItems } = useContext(CartContext);
   const cartItemsArray = [];
 
@@ -11,9 +12,17 @@ const CartProducts = () => {
   }
 
   return (
-    <section className='flex flex-col justify-start overflow-auto gap-2 h-3/5'>
+    <section
+      className={`flex flex-col justify-start overflow-auto gap-2 ${
+        isHomePage ? 'h-3/5' : ''
+      }`}
+    >
       {cartItemsArray.map((product) => {
-        return <CartItem {...product} key={`key_${product.id}`} />;
+        return isHomePage ? (
+          <CartItem {...product} key={`key_${product.id}`} />
+        ) : (
+          <SimpleCartItem {...product} key={`key_${product.id}`} />
+        );
       })}
     </section>
   );
