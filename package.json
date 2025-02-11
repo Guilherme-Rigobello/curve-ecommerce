@@ -1,5 +1,4 @@
 {
-  "homepage": "https://guilherme-rigobello.github.io/curve-ecommerce",
   "name": "magazinerigobello",
   "private": true,
   "version": "0.0.0",
@@ -8,9 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.3.1",
