@@ -1,10 +1,9 @@
 // REACT
-import { useContext, useState, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { CartContext, getAmountOfItemsInCart } from '../contexts/CartContext';
 //REACT ICONS
-import { FaUserAlt, FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingCart } from 'react-icons/fa';
 // ROUTERS
-import { Link } from 'react-router-dom';
 
 const UserButtons = () => {
   const [amountOfItems, setAmountOfItems] = useState(0);
@@ -30,9 +29,7 @@ const UserButtons = () => {
           </div>
         )}
       </button>
-      <Link to='/history'>
-        <FaUserAlt className='hover:translate-y-[-3px] hover:text-white transition duration-300' />
-      </Link>
+
     </div>
   );
 };

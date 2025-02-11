@@ -1,13 +1,13 @@
 //COMPONENTS/PAGES
 import Header from './components/Header';
-import Home from './pages/HomePage/Home';
 import Checkout from './pages/CheckoutPage/Checkout';
-import PurchaseHistory from './pages/PurchaseHistoryPage/PurchaseHistory';
+import Home from './pages/HomePage/Home';
+
 //CONTEXTS
 import { CartContext } from './contexts/CartContext';
 // ROUTERS
-import { Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
 const App = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -52,7 +52,6 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/checkout' element={<Checkout />} />
-        <Route path='/history' element={<PurchaseHistory />} />
       </Routes>
     </CartContext.Provider>
   );
