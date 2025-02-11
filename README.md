@@ -6,11 +6,13 @@ Plataforma funcional onde os usuários podem adicionar itens ao carrinho, filtra
 **1** - Clone o projeto:
 `git clone https://github.com/Guilherme-Rigobello/curve-ecommerce.git`
 
-**2** - Instale as dependencias: `npm i`
+**2** - Entre na pasta: `cd curve-ecommerce`
 
-**3** - Execute o projeto: `npm run dev`
+**3** - Instale as dependencias: `npm i`
 
-**4** - Abra o servidor local
+**4** - Execute o projeto: `npm run dev`
+
+**5** - Abra o servidor local
 
 
 
